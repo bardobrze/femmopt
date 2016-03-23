@@ -55,11 +55,11 @@ def plot_objectives(output_folder, prefix, nl_evals, dl_evals):
     fig.set_size_inches(width/96, height/96)
     
     for i in range(0, len(dl_obj)):
-        plt.xlim([-1, 100])
-        plt.ylim([180, 410])
+        plt.xlim([-1, len(dl_obj)])
+        plt.ylim([180, 380])
 
-        dl, = plt.plot(dl_obj[:i+1], 'rs-', label='global', markersize=2)
-        nl, = plt.plot(nl_obj[:i+1], 'bo-', label='local', markersize=2)
+        dl, = plt.plot(dl_obj[:i+1], 'rs-', label='global', markersize=4)
+        nl, = plt.plot(nl_obj[:i+1], 'bo-', label='local', markersize=4)
         
         plt.ylabel("E [V/m]")
         

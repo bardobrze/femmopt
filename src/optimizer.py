@@ -37,10 +37,10 @@ def optimize(algorithm, experiment_name, output_folder):
                                   experiment_name=experiment_name,
                                   output_folder=output_folder))
     opt.set_xtol_abs(0.01)
-    opt.set_maxeval(100)
+    opt.set_maxeval(50)
     
     
-    x = opt.optimize([0, 0.2])
+    x = opt.optimize([0, 0.65])
     minf = opt.last_optimum_value()
     print ("optimum at ", x[0],x[1])
     print ("minimum value = ", minf)
